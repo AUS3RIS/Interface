@@ -1,0 +1,26 @@
+doctype html
+html lang="en"
+  head
+    = display_meta_tags site: 'CHEVRON', title: '', reverse: true
+
+    = csrf_meta_tags
+    = display_meta_tags charset: 'utf-8'
+    = display_meta_tags noindex: false
+    = display_meta_tags viewport: 'width=device-width,initial-scale=1.0,minimum-scale=1'
+    = display_meta_tags 'apple-mobile-app-capable' => 'yes'
+
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8; Cache-Control: no-cache"
+    meta http-equiv="Cache-Control" content="no-cache"
+    meta http-equiv="Pragma" content="no-cache"
+    meta http-equiv="Expires" content="0"
+
+    / = favicon_link_tags
+
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+
+    / - unless Rails.env.production?
+    /   = javascript_include_tag 'devtools'
+  body
+    = yield
