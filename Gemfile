@@ -17,3 +17,7 @@ gem 'jquery-rails', '3.1.2'
 gem 'slim-rails', '2.1.5'
 
 gem 'meta-tags', '2.0.0'
+
+group :development do
+  gem 'quiet_assets', '1.0.3'
+end

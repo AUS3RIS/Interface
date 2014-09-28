@@ -1,0 +1,72 @@
+html
+  min-height: 100%
+  font-size: $tiny-font-size
+  box-sizing: border-box
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+*:focus
+  outline: none !important
+
+body
+  background-color: transparent
+  overflow: auto
+  margin: 0
+  font-family: $sans-serif-font-typeface
+  font-size: $medium-font-size
+  line-height: $medium-line-height
+
+input,
+button,
+select,
+textarea
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+a
+  // color: $link-color
+  text-decoration: none
+
+  &:hover,
+  &:focus
+    // color: $link-hover-color
+    text-decoration: underline
+
+  &:focus
+    // @include tab-focus()
+
+img
+  vertical-align: middle
+
+hr
+  margin-top:    $medium-line-height
+  margin-bottom: $medium-line-height
+  // border-top: 1px solid #999
+
+.hidden
+  display: none
+  visibility: hidden
+
+.invisible
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+
+.invisible-focus
+  &:active,
+  &:focus
+    position: static
+    width: auto
+    height: auto
+    margin: 0
+    overflow: visible
+    clip: auto
