@@ -1,0 +1,30 @@
+=vendor($property, $value...)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+  #{$property}: $value
+
+=breakpoint($point)
+  @if $point == small
+    @media (min-width: $small-screen-min)
+      @content
+  @else if $point == medium
+    @media (min-width: $medium-screen-min)
+      @content
+  @else if $point == large
+    @media (min-width: $large-screen-min)
+      @content
+  @else if $point == huge
+    @media (min-width: $huge-screen-min)
+      @content
+  @else if $point == density
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5)
+      @content
+
+=font-size($font-size, $line-height: true)
+  font-size: $font-size
+  font-size: calculate-rem($font-size)
+
+  @if $line-height == true
+    line-height: calculate-line-height($font-size)

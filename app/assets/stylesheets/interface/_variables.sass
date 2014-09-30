@@ -1,29 +1,27 @@
-// — Screen sizes
-$tiny-screen: 320px !default
-$small-screen: 568px !default
-$medium-screen: 768px !default
-$large-screen: 1024px !default
-
-$small-screen-min: $tiny-screen + 1 !default
-$medium-screen-min: $small-screen + 1 !default
-$large-screen-min: $medium-screen + 1 !default
-$huge-screen-min: $large-screen + 1 !default
-
-// — Font typefaces
-$sans-serif-font-typeface: "Helvetica Neue", Helvetica, Arial, sans-serif !default
-$serif-font-typeface: Georgia, "Times New Roman", Times, serif !default
-$monospace-font-typeface: Menlo, Monaco, Consolas, "Courier New", monospace !default
+// — Media breakpoints
+$small-screen-min: $tiny-screen + 1
+$medium-screen-min: $small-screen + 1
+$large-screen-min: $medium-screen + 1
+$huge-screen-min: $large-screen + 1
 
 // — Font sizes
-$tiny-font-size: 10px !default
-$small-font-size: 12px !default
-$medium-font-size: 16px !default
-$large-font-size: 24px !default
-$huge-font-size: 40px !default
+$heading1-font-size: null
+$heading2-font-size: null
+$heading3-font-size: null
+$heading4-font-size: null
+$heading5-font-size: null
+$heading6-font-size: null
 
-$base-line-height: 1.428571429 !default
-$tiny-line-height: floor(($tiny-font-size * $base-line-height)) !default
-$small-line-height: floor(($small-font-size * $base-line-height)) !default
-$medium-line-height: floor(($medium-font-size * $base-line-height)) !default
-$large-line-height: floor(($large-font-size * $base-line-height)) !default
-$huge-line-height: floor(($huge-font-size * $base-line-height)) !default
+$paragraph-font-size: null
+
+@if $use-theme == false
+
+  // — Font sizes
+  $heading1-font-size: $base-font-size + 64
+  $heading2-font-size: $base-font-size + 48
+  $heading3-font-size: $base-font-size + 32
+  $heading4-font-size: $base-font-size + 16
+  $heading5-font-size: $base-font-size + 8
+  $heading6-font-size: $base-font-size + 4
+
+  $paragraph-font-size: $base-font-size
